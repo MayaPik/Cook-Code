@@ -953,6 +953,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6481528866503925241, guid: def14155ded2649b1a886d1a800c1661, type: 3}
   m_PrefabInstance: {fileID: 407908869}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &407908873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407908870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41613d76c3ed4a5cb14a825200d9100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMain: 0
 --- !u!1 &481051382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,7 +3008,7 @@ PrefabInstance:
     - target: {fileID: 1100092473216629926, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 407908870}
+      objectReference: {fileID: 407908873}
     - target: {fileID: 1100092473216629926, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
       propertyPath: buttonHome
       value: 
@@ -3012,6 +3025,10 @@ PrefabInstance:
       propertyPath: poolOfObjects
       value: 
       objectReference: {fileID: 957647593}
+    - target: {fileID: 1100092473216629926, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
+      propertyPath: defaultTrigger
+      value: Think
+      objectReference: {fileID: 0}
     - target: {fileID: 1100092473216629944, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
       propertyPath: m_Name
       value: Coding Surface
@@ -3124,7 +3141,8 @@ PrefabInstance:
       propertyPath: poolOfObjects
       value: 
       objectReference: {fileID: 957647593}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1100092473823579291, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
 --- !u!1001 &2824291274098839824
 PrefabInstance:

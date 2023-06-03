@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Charecter : MonoBehaviour
+public class CharecterInteractive : MonoBehaviour
 {
     private void OnMouseDown()
     {

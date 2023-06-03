@@ -1,25 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
+[RequireComponent(typeof(Player))]
 public class RunFunction : MonoBehaviour
 {
     [SerializeField] List<Slot> slots;
-    [SerializeField] GameObject player;
+    [SerializeField] Player player;
     [SerializeField] GameObject buttonHome;
     [SerializeField] GameObject buttonAgain;
     [SerializeField] GameObject hand;
     [SerializeField] GameObject poolOfObjects;
-    [SerializeField] string defultTrigger;
-    Animator playerAnimator;
+    [SerializeField] string defaultTrigger;
+    private Animator playerAnimator;
 
     private void Start()
     {
         slots = new List<Slot>();
         playerAnimator = player.GetComponent<Animator>();
-        playerAnimator.SetTrigger(defultTrigger);
+        playerAnimator.SetTrigger(defaultTrigger);
         CollectChildSlots(transform);
+
         if (buttonHome != null)
         {
             buttonHome.SetActive(false);
@@ -47,10 +49,9 @@ public class RunFunction : MonoBehaviour
         {
             return;
         }
+
         DestroyPoolOfObjects();
-     
         StartCoroutine(GrabItemsCoroutine());
-        
     }
 
     private IEnumerator GrabItemsCoroutine()
@@ -60,38 +61,11 @@ public class RunFunction : MonoBehaviour
             if (slot.draggedObject != null)
             {
                 Debug.Log(slot.draggedObject.name);
-                yield return StartCoroutine(GrabItemCoroutine(slot.draggedObject, playerAnimator));
+                yield return StartCoroutine(player.GetItem(slot.draggedObject, playerAnimator, hand));
             }
         }
 
         CheckIfCorrect();
-    }
-
-    private IEnumerator GrabItemCoroutine(GameObject gameObject, Animator playerAnimator)
-    {
-        playerAnimator.SetTrigger("Idle");
-        playerAnimator.SetTrigger("Bend");
-        yield return new WaitForSeconds(2f);
-        GameObject item = Instantiate(gameObject);
-        item.transform.localScale = gameObject.GetComponent<Item>().objectSize;
-        item.transform.localPosition = gameObject.GetComponent<Item>().objectLocation;
-        item.transform.localRotation = gameObject.GetComponent<Item>().objectRotation;
-        CapsuleCollider handCollider = hand.GetComponent<CapsuleCollider>();
-        Debug.Log(handCollider);
-        if (handCollider != null)
-        {
-            item.transform.SetParent(handCollider.transform, false);
-        }
-        yield return new WaitForSeconds(2f);
-
-        ObjectAction objectAction = item.GetComponent<ObjectAction>();
-        if (objectAction != null)
-        {
-            objectAction.PerformAction();
-        }
-
-        yield return new WaitUntil(() => playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Bending") == false);
-        player.transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
     private void CheckIfCorrect()
@@ -113,6 +87,7 @@ public class RunFunction : MonoBehaviour
                 }
             }
         }
+
         if (buttonHome != null)
         {
             buttonHome.SetActive(true);
@@ -134,6 +109,7 @@ public class RunFunction : MonoBehaviour
         if (poolOfObjects.transform.childCount > 0)
         {
             int childCount = poolOfObjects.transform.childCount;
+
             for (int i = childCount - 1; i >= 0; i--)
             {
                 GameObject childObject = poolOfObjects.transform.GetChild(i).gameObject;
