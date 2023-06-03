@@ -22,6 +22,8 @@ TagManager:
   - ButtonNext
   - ButtonAgain
   - Cover
+  - chef
+  - souschef
   layers:
   - Default
   - TransparentFX

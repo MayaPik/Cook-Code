@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 888182222}
   m_Layer: 0
   m_Name: SousChef
-  m_TagString: Untagged
+  m_TagString: souschef
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,7 +240,7 @@ Animator:
   m_GameObject: {fileID: 478561581821547965}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 967196a0695f2ac4bb104b37896e6aa4, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bfd048feb7a0bd543b0e670fd8f4c172, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

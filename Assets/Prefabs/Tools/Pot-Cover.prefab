@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 848375664428630986}
   - component: {fileID: 848375664428630987}
   - component: {fileID: 848375664428630999}
+  - component: {fileID: 263009056955439500}
   m_Layer: 0
   m_Name: Pot-Cover
   m_TagString: Cover
@@ -111,8 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4517630a7d9234c40a8de7c51df181a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
+  codeCamera: {fileID: 0}
   originalPosition: {x: 0, y: 0, z: 0}
+  hover: 0
 --- !u!114 &848375664428630999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,3 +129,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolOfObjects: {fileID: 0}
   table: {fileID: 0}
+--- !u!114 &263009056955439500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848375664428630989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2c2b1541a63419c846530e798e1ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectLocation: {x: 0.06, y: -0.08, z: 0.09}
+  objectRotation: {x: -0.00000003090862, y: 0.70710677, z: -0.70710677, w: -0.00000003090862}
+  objectSize: {x: 1, y: 1, z: 1}

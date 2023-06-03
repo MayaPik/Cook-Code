@@ -7,22 +7,18 @@ public class RunFunction : MonoBehaviour
 {
     [SerializeField] List<Slot> slots;
     [SerializeField] GameObject player;
-    [SerializeField] GameObject subPlayer;
     [SerializeField] GameObject buttonHome;
     [SerializeField] GameObject buttonAgain;
     [SerializeField] GameObject hand;
     [SerializeField] GameObject poolOfObjects;
-    [SerializeField] GameObject table;
-
+    [SerializeField] string defultTrigger;
     Animator playerAnimator;
-
 
     private void Start()
     {
         slots = new List<Slot>();
         playerAnimator = player.GetComponent<Animator>();
-        playerAnimator.SetTrigger("Think");
-        
+        playerAnimator.SetTrigger(defultTrigger);
         CollectChildSlots(transform);
         if (buttonHome != null)
         {
@@ -42,7 +38,6 @@ public class RunFunction : MonoBehaviour
         {
             Transform child = parent.GetChild(i);
             CollectChildSlots(child);
-            
         }
     }
 
@@ -53,8 +48,9 @@ public class RunFunction : MonoBehaviour
             return;
         }
         DestroyPoolOfObjects();
-
+     
         StartCoroutine(GrabItemsCoroutine());
+        
     }
 
     private IEnumerator GrabItemsCoroutine()
@@ -64,19 +60,18 @@ public class RunFunction : MonoBehaviour
             if (slot.draggedObject != null)
             {
                 Debug.Log(slot.draggedObject.name);
-                yield return StartCoroutine(GrabItemCoroutine(slot.draggedObject));
+                yield return StartCoroutine(GrabItemCoroutine(slot.draggedObject, playerAnimator));
             }
         }
 
         CheckIfCorrect();
     }
 
-    private IEnumerator GrabItemCoroutine(GameObject gameObject)
+    private IEnumerator GrabItemCoroutine(GameObject gameObject, Animator playerAnimator)
     {
         playerAnimator.SetTrigger("Idle");
-
         playerAnimator.SetTrigger("Bend");
-        yield return new WaitForSeconds(2f); 
+        yield return new WaitForSeconds(2f);
         GameObject item = Instantiate(gameObject);
         item.transform.localScale = gameObject.GetComponent<Item>().objectSize;
         item.transform.localPosition = gameObject.GetComponent<Item>().objectLocation;
@@ -134,17 +129,19 @@ public class RunFunction : MonoBehaviour
         }
     }
 
-    void DestroyPoolOfObjects() {
-         if (poolOfObjects.transform.childCount > 0)
+    private void DestroyPoolOfObjects()
+    {
+        if (poolOfObjects.transform.childCount > 0)
         {
             int childCount = poolOfObjects.transform.childCount;
             for (int i = childCount - 1; i >= 0; i--)
             {
                 GameObject childObject = poolOfObjects.transform.GetChild(i).gameObject;
-                Destroy(childObject); 
+                Destroy(childObject);
             }
         }
     }
+
     public void HomeScreen()
     {
         SceneManager.LoadScene("SyncMain");
