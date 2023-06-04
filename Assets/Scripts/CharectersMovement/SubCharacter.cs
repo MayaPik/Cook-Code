@@ -21,7 +21,7 @@ public class SubCharacter : MonoBehaviour
     {
         while (true)
         {
-            yield return StartCoroutine(player.GetItem(tomatoPrefab, subPlayerAnimator, hand));
+            yield return StartCoroutine(player.GetItem(null, tomatoPrefab, subPlayerAnimator, hand));
             yield return null;
         }
     }
