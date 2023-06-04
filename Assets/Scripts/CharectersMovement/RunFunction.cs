@@ -45,11 +45,11 @@ public class RunFunction : MonoBehaviour
 
     public void RunInput()
     {
+        player.shouldBreakLoop = false;
         if (slots.Count == 0)
         {
             return;
         }
-
         DestroyPoolOfObjects();
         StartCoroutine(GrabItemsCoroutine());
     }
@@ -60,9 +60,12 @@ public class RunFunction : MonoBehaviour
         {
             if (slot.draggedObject != null)
             {
-                Debug.Log(slot.draggedObject.name);
-                yield return StartCoroutine(player.GetItem(slot.draggedObject, playerAnimator, hand));
+                yield return StartCoroutine(player.GetItem(slot, slot.draggedObject, playerAnimator, hand));
             }
+             if (player.shouldBreakLoop)
+        {
+            break; // Exit the loop if shouldBreakLoop is true
+        }
         }
 
         CheckIfCorrect();

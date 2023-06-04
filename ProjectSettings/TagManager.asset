@@ -24,6 +24,9 @@ TagManager:
   - Cover
   - chef
   - souschef
+  - Stock
+  - 10
+  - Cooker
   layers:
   - Default
   - TransparentFX
