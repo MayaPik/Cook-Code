@@ -27,6 +27,7 @@ TagManager:
   - Stock
   - 10
   - Cooker
+  - Tomatos
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 4097270702649264816}
   - component: {fileID: 2249718124743409274}
   - component: {fileID: 4336890666904441347}
+  - component: {fileID: 4653033806294723608}
+  - component: {fileID: 650236527395722821}
+  - component: {fileID: 4736489432336531698}
   m_Layer: 0
   m_Name: Vegetable-Tub
   m_TagString: Untagged
@@ -26,10 +29,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304105980549472175}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: -190.94948, z: 0}
+  m_LocalScale: {x: 250, y: 186.4629, z: 159.54932}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8676174274394662118}
   - {fileID: 5428403382352332223}
@@ -105,8 +108,51 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.59373087, y: 0.1187462, z: 0.3562386}
-  m_Center: {x: 0, y: 0.0593731, z: 0}
+  m_Size: {x: 0.69717604, y: 0.18931048, z: 0.46674344}
+  m_Center: {x: -0.003520981, y: 0.09465524, z: -0.05525238}
+--- !u!114 &4653033806294723608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304105980549472175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4517630a7d9234c40a8de7c51df181a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  codeCamera: {fileID: 0}
+  originalPosition: {x: 0, y: 0, z: 0}
+  hover: 0
+--- !u!114 &650236527395722821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304105980549472175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2c2b1541a63419c846530e798e1ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectLocation: {x: 0, y: 0, z: 0}
+  objectRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+  objectSize: {x: 1, y: 1, z: 1}
+  type: 0
+--- !u!114 &4736489432336531698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304105980549472175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f87a5fa51ff642b7a0ff936bc1992fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &553679611891218888
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383236621919256612}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.108928226, y: 0.14538902, z: -0.0095936945}
+  m_LocalPosition: {x: -0.16, y: 0.14538902, z: -0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -619,7 +665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6683780085181205613}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.108928226, y: 0.14538902, z: -0.0095936945}
+  m_LocalPosition: {x: -0.16, y: 0.14538902, z: -0.0095936945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -716,7 +762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7372736463735834140}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.20258154, y: 0.08011016, z: 0.09346579}
+  m_LocalPosition: {x: -0.04, y: 0.08011016, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

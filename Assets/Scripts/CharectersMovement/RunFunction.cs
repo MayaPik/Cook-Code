@@ -101,12 +101,21 @@ public class RunFunction : MonoBehaviour
     {
         if (buttonAgain != null)
         {
+            EmptyHands();
+            player.transform.position = player.originalPosition;
             playerAnimator.SetTrigger("Idle");
             buttonAgain.SetActive(true);
             DestroyPoolOfObjects();
         }
     }
 
+    private void EmptyHands() {
+        GameObject objectInHand = hand.GetComponentInChildren<Item>().gameObject;
+        if (objectInHand != null) 
+        {
+        objectInHand.transform.SetParent(poolOfObjects.transform, false);
+        }
+    }
     private void DestroyPoolOfObjects()
     {
         if (poolOfObjects.transform.childCount > 0)

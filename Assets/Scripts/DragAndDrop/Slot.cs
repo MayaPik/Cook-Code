@@ -7,6 +7,14 @@ public class Slot : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite regularSprite;
     public Sprite hoverSprite;
+     public enum TypeOptions
+        {
+            Normal,
+            Abstract
+        }
+
+        [SerializeField]
+        public TypeOptions type;
 
     private void Start()
     {
