@@ -10,6 +10,7 @@ public class SubCharacter : MonoBehaviour
     [SerializeField] GameObject poolOfObjects;
     Animator subPlayerAnimator;
     [SerializeField] Player player;
+    [SerializeField] TomatoStatus tomatoStatus;
 
     private void Start()
     {
@@ -21,7 +22,15 @@ public class SubCharacter : MonoBehaviour
     {
         while (true)
         {
-            yield return StartCoroutine(player.GetItem(null, tomatoPrefab, subPlayerAnimator, hand));
+            if (tomatoStatus.tomatoNumber > 0)
+            {
+                yield return StartCoroutine(player.GetItem(null, tomatoPrefab, subPlayerAnimator, hand));
+            }
+            else
+            {
+                // Handle case when there are no tomatoes available
+                Debug.Log("No tomatoes available.");
+            }
             yield return null;
         }
     }

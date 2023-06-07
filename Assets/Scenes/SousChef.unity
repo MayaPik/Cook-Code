@@ -980,7 +980,7 @@ MonoBehaviour:
   shouldBreakLoop: 0
   originalPosition: {x: 0, y: 0, z: 0}
   isMain: 0
-  tomatoState: {fileID: 1807920131}
+  tomatoStatus: {fileID: 11400000, guid: 5ad8bbfd5e12541449114c6ad986683a, type: 2}
 --- !u!1 &604109842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,6 +1896,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7704785446287626323, guid: 25cbc6083afddf1438bb5639c59d5e40, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704785446287626323, guid: 25cbc6083afddf1438bb5639c59d5e40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704785446287626323, guid: 25cbc6083afddf1438bb5639c59d5e40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7820931351666730036, guid: 25cbc6083afddf1438bb5639c59d5e40, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -2213,6 +2225,7 @@ MonoBehaviour:
   hand: {fileID: 19204421}
   poolOfObjects: {fileID: 957647593}
   player: {fileID: 1549562823}
+  tomatoStatus: {fileID: 11400000, guid: 5ad8bbfd5e12541449114c6ad986683a, type: 2}
 --- !u!114 &1549562823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,7 +2270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc5e9ff3c8394bd78b75c35fe56b7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tomatoNumber: 10
+  tomatoStatus: {fileID: 11400000, guid: 5ad8bbfd5e12541449114c6ad986683a, type: 2}
+  currentTomatoNumber: 0
+  chef: {fileID: 1549562821}
 --- !u!1 &1817303130
 GameObject:
   m_ObjectHideFlags: 0

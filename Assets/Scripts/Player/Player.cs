@@ -6,6 +6,7 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     protected Animator animator;
     public bool shouldBreakLoop = false;
     public Vector3 originalPosition;
+    // [SerializeField] ParticleSystem particle;
     
     [SerializeField] protected bool isMain;
 
@@ -34,15 +35,14 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
         {
             item.transform.SetParent(handCollider.transform, false);
         }
-
+        // particle.gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
-
         ObjectAction objectAction = item.GetComponent<ObjectAction>();
         if (objectAction != null)
         {
             objectAction.PerformAction();
         }
-
+        // particle.gameObject.SetActive(false);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Bending") == false);
         transform.rotation = Quaternion.Euler(0, 180, 0);
     }

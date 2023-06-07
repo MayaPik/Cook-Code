@@ -109,13 +109,22 @@ public class RunFunction : MonoBehaviour
         }
     }
 
-    private void EmptyHands() {
-        GameObject objectInHand = hand.GetComponentInChildren<Item>().gameObject;
-        if (objectInHand != null) 
-        {
+   private void EmptyHands()
+{
+    Item itemInHand = hand.GetComponentInChildren<Item>();
+
+    if (itemInHand != null)
+    {
+        GameObject objectInHand = itemInHand.gameObject;
         objectInHand.transform.SetParent(poolOfObjects.transform, false);
-        }
     }
+    else
+    {
+        return;
+    }
+}
+
+
     private void DestroyPoolOfObjects()
     {
         if (poolOfObjects.transform.childCount > 0)
