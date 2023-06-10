@@ -11,7 +11,6 @@ public class SousChef : Player
 
     private IEnumerator GetItemCoroutine(Slot slot, GameObject itemGameObject, Animator animator, GameObject hand)
     {
-
         if (slot.GetComponent<Slot>().type == Slot.TypeOptions.Abstract) {
             if (itemGameObject.tag == slot.tag) {
             yield return null; 

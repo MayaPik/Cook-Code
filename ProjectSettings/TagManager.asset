@@ -28,6 +28,10 @@ TagManager:
   - 10
   - Cooker
   - Tomatos
+  - KillPlayer
+  - programmer
+  - ButtonPlay
+  - PracticeButton
   layers:
   - Default
   - TransparentFX

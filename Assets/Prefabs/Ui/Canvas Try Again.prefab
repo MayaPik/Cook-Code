@@ -7,6 +7,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4591357601078118138, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
+      propertyPath: m_text
+      value: Try Again
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591357601078118138, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591357601078118138, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.9575472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591357601078118138, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.98787063
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591357601078118138, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294964476
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591357601337536079, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cb1fee516d444164abc17d4b2050d4c2, type: 3}
     - target: {fileID: 4591357603137494301, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -93,7 +117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591357603137494305, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
       propertyPath: m_Name
-      value: Canvas Back Button 1
+      value: Canvas Try Again
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da38dcaabc9514e76bd862217cbff601, type: 3}

@@ -6,7 +6,6 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     protected Animator animator;
     public bool shouldBreakLoop = false;
     public Vector3 originalPosition;
-    // [SerializeField] ParticleSystem particle;
     
     [SerializeField] protected bool isMain;
 
@@ -14,7 +13,6 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     {
         animator = GetComponent<Animator>();
         originalPosition = transform.position;
-
     }
 
     public abstract IEnumerator GetItem(Slot slot, GameObject itemGameObject, Animator animator, GameObject hand);
@@ -24,6 +22,7 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     transform.position = originalPosition;
     yield return null; // Yielding once to allow the control to return to the GrabItemsCoroutine loop
     }
+
     protected IEnumerator GrabItemCoroutine(GameObject gameObject, GameObject hand)
     {
         GameObject item = Instantiate(gameObject);
