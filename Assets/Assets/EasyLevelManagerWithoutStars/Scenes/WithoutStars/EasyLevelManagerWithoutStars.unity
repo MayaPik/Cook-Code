@@ -309,7 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W1LVL5
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!114 &66548135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W2LVL1
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!114 &86624960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,7 +609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W2LVL3
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!114 &130468674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,7 +919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W2LVL5
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!114 &219574716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,7 +1232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W2LVL2
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!114 &313657109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,7 +1705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W1LVL4
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!114 &515876007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2009,7 +2015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W2LVL4
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!114 &616677149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3116,7 +3123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W1LVL3
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!114 &907334849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3569,8 +3577,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1034114544}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Leveltoload
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3652,7 +3660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W1LVL1
+  levelToLoadOnClick: WW1
+  continuouslyRunningSceneName: Environment
 --- !u!1 &1043352849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4759,7 +4768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: EasyLevelManagerWithoutStars
+  levelToLoadOnClick: 
+  continuouslyRunningSceneName: Environment
 --- !u!1 &1351891617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5801,7 +5811,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1b3c05b6151454d9b11a0697c8ec78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leveltoloadonclick: W1LVL2
+  levelToLoadOnClick: W1LVL1
+  continuouslyRunningSceneName: Environment
 --- !u!114 &1750473545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5847,8 +5858,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1750473544}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Leveltoload
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

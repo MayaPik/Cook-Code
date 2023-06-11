@@ -11,6 +11,7 @@ public string NextWorldName;
 private int points;
 private int temppoints;
 private int totalstars=0;
+
 public void OnCollisionEnter(Collision obj)
 {
 	

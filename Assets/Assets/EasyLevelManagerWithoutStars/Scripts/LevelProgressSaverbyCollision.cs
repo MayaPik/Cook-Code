@@ -10,9 +10,9 @@ public string WorldName;
 private int points;
 private int temppoints;
 public bool hastogainpoints=false;
+
 public void OnCollisionEnter(Collision obj)
 {
-	
 	LevelProgressSaver(obj.gameObject);
 }
 public void OnCollisionEnter2D(Collision2D obj)
@@ -30,11 +30,11 @@ public void OnTriggerEnter(Collider obj)
 	
 	LevelProgressSaver(obj.gameObject);
 }
+
 void LevelProgressSaver(GameObject obj)
 { 
 if(obj.gameObject.tag=="Player"&&!hastogainpoints)
 	UnlockLevel();
-	
 }
 
 
