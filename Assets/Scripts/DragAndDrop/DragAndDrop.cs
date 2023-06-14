@@ -7,7 +7,7 @@ public class DragAndDrop : MonoBehaviour
     private Slot previousSlot;
     private Slot hitSlot;
     public Vector3 originalPosition;
-    public bool hover;
+    private bool hover;
 
     private void Start()
     {

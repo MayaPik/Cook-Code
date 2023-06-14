@@ -3,7 +3,7 @@ using TMPro;
 
 public class GetPlayerPoints : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    [SerializeField] TextMeshProUGUI text;
     private int playerPoints;
 
     private void Update()

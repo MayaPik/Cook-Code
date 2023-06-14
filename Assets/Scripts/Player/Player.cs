@@ -6,7 +6,6 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     protected Animator animator;
     public bool shouldBreakLoop = false;
     public Vector3 originalPosition;
-    
     [SerializeField] protected bool isMain;
 
     protected virtual void Start() //The "virtual" keyword allows derived classes to override this method with their own implementation.
@@ -26,9 +25,10 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     protected IEnumerator GrabItemCoroutine(GameObject gameObject, GameObject hand)
     {
         GameObject item = Instantiate(gameObject);
-        item.transform.localScale = gameObject.GetComponent<Item>().objectSize;
-        item.transform.localPosition = gameObject.GetComponent<Item>().objectLocation;
-        item.transform.localRotation = gameObject.GetComponent<Item>().objectRotation;
+        Item itemComponent = item.GetComponent<Item>();
+        item.transform.localScale = itemComponent.ObjectSize;
+        item.transform.localPosition = itemComponent.ObjectLocation;
+        item.transform.localRotation = itemComponent.ObjectRotation;
         CapsuleCollider handCollider = hand.GetComponent<CapsuleCollider>();
         if (handCollider != null)
         {
@@ -41,6 +41,7 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
         {
             objectAction.PerformAction();
         }
+
         // particle.gameObject.SetActive(false);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Bending") == false);
         transform.rotation = Quaternion.Euler(0, 180, 0);

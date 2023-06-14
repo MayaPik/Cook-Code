@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class TomatoState : MonoBehaviour
 {
-    public TomatoStatus tomatoStatus;
-    public int currentTomatoNumber;
-    public GameObject chef;
+    [SerializeField] TomatoStatus tomatoStatus;
+    [SerializeField] int currentTomatoNumber;
+    [SerializeField] GameObject chef;
     private float timeToPickTomato = 1f;
     Animator animator;
 
-    private void Start()
+    private void Awake()
     {
         animator = chef.GetComponent<Animator>();
         tomatoStatus.Tomatoes.Clear(); // Clear the list before adding active tomatoes

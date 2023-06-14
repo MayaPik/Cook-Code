@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SetPlayerPoints : MonoBehaviour {
-    
-    public int pointstoset;
+
+    [SerializeField] int pointstoset;
 
     public void SetPoints()
         {
-        PlayerPrefs.SetInt("PlayerPoints",pointstoset);
+        int playerPoints = PlayerPrefs.GetInt("PlayerPoints");
+    
+        PlayerPrefs.SetInt("PlayerPoints",playerPoints+pointstoset);
         }
 	
 }

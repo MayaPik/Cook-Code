@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class TomatoStatus : ScriptableObject
 {
     public List<GameObject> Tomatoes = new List<GameObject>();
-    public List<GameObject> FullTomatoes;
+    private List<GameObject> FullTomatoes;
     public int tomatoNumber;
 
     private void OnEnable()

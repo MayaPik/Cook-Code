@@ -687,7 +687,7 @@ PrefabInstance:
     - target: {fileID: -5118352760475838477, guid: b178ccb99434d445b904ea7e8bfcf860, type: 3}
       propertyPath: table
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1235145131}
     - target: {fileID: -5118352760475838477, guid: b178ccb99434d445b904ea7e8bfcf860, type: 3}
       propertyPath: poolOfObjects
       value: 
@@ -2284,6 +2284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def14155ded2649b1a886d1a800c1661, type: 3}
+--- !u!1 &1235145131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8037010268636558271, guid: 458257328d2243d4fa8e6e866c085482, type: 3}
+  m_PrefabInstance: {fileID: 208568127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1317641182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 182049591695105956, guid: b12b8ddf001bc3c4faebcac887b78bb1, type: 3}
@@ -2361,7 +2366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c1a4d241114447b88d6238c61f8d16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  table: {fileID: 0}
+  table: {fileID: 1235145131}
   tomatoPrefab: {fileID: 1517454344}
   hand: {fileID: 19204421}
   poolOfObjects: {fileID: 957647593}

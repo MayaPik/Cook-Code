@@ -4,10 +4,11 @@ using UnityEngine.EventSystems;
 public class Slot : MonoBehaviour
 {
     public GameObject draggedObject;
-    public SpriteRenderer spriteRenderer;
-    public Sprite regularSprite;
-    public Sprite hoverSprite;
-     public enum TypeOptions
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite regularSprite;
+    [SerializeField] Sprite hoverSprite;
+
+    public enum TypeOptions
         {
             Normal,
             Abstract

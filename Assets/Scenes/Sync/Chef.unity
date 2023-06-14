@@ -1963,6 +1963,67 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8037010268636558271, guid: 458257328d2243d4fa8e6e866c085482, type: 3}
   m_PrefabInstance: {fileID: 2118899754}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1543049782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543049785}
+  - component: {fileID: 1543049784}
+  - component: {fileID: 1543049783}
+  m_Layer: 0
+  m_Name: 'Game Manager '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1543049783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543049782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf23a8e1628c4b27a61b0f906465359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointstoset: 50
+--- !u!114 &1543049784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543049782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e409e6363174504b8c39d1ac377e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextObject: {fileID: 0}
+  LevelToUnlock: 3
+  WorldName: Sync
+--- !u!4 &1543049785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543049782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -64.48333, y: -3.527152, z: 58.26521}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543313018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,11 +3038,11 @@ PrefabInstance:
     - target: {fileID: 1100092474201678374, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
       propertyPath: table
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1539638824}
     - target: {fileID: 1100092474201678374, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
       propertyPath: poolOfObjects
       value: 
-      objectReference: {fileID: 1539638824}
+      objectReference: {fileID: 957647593}
     - target: {fileID: 1100092474201678394, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
       propertyPath: codeCamera
       value: 

@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public string Worldname;
-    public string NextWorldname;
+    [SerializeField] string Worldname;
+    [SerializeField] string NextWorldname;
     private int totalstars = 0;
-    public GameObject[] Levellockbuttons;
-    public GameObject spotlight;
+    [SerializeField] GameObject[] Levellockbuttons;
+    [SerializeField] GameObject spotlight;
     private bool keycheck;
     private int temp;
 

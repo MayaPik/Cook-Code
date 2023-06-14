@@ -8,11 +8,10 @@ public class SyncCards : MonoBehaviour
 {
     private List<Animator> childAnimators;
     private List<Button> buttons;
-
     private int currentIndex = 0;
-    public GameObject practiceButton;
-    public GameObject nextScreenButton;
-    public string sceneMode = "SyncExplained";
+    [SerializeField] GameObject practiceButton;
+    [SerializeField] GameObject nextScreenButton;
+    private string sceneMode = "SyncExplained";
 
     private void Start()
     {

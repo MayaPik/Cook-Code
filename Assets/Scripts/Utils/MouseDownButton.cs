@@ -6,8 +6,8 @@ using TMPro;
 public class MouseDownButton : MonoBehaviour
 {
     public UnityEvent onMouseDownEvent;
-    public bool locked = false;
-    public TextMeshPro text;
+    public bool locked = false; 
+    [SerializeField] TextMeshPro text;
 
     private void OnMouseDown()
     {

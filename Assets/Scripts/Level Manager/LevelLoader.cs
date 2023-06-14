@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public string levelToLoadOnClick;
-    public string continuouslyRunningSceneName = "Environment";
-	public bool mainScreen;
+    private string continuouslyRunningSceneName = "Environment";
+	[SerializeField] bool mainScreen;
 
 	public void Update() {
 		if (mainScreen)

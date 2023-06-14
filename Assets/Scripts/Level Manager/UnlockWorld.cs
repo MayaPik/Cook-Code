@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UnlockWorld : MonoBehaviour {
-public string Worldnametounlock;
+
+    [SerializeField] private string Worldnametounlock;
 	void Start () {
-		if(!PlayerPrefs.HasKey("LevelAvailable"+Worldnametounlock))
-		PlayerPrefs.SetInt("LevelAvailable"+Worldnametounlock,1);
+			if(!PlayerPrefs.HasKey("LevelAvailable"+Worldnametounlock))
+			PlayerPrefs.SetInt("LevelAvailable"+Worldnametounlock,1);
 	}
 }
