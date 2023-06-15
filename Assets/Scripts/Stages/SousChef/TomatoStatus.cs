@@ -30,6 +30,10 @@ public class TomatoStatus : ScriptableObject
     {
         Tomatoes.Clear();
         Tomatoes.AddRange(FullTomatoes);
+        foreach (GameObject tomato in Tomatoes)
+        {
+            tomato.SetActive(true);
+        }
         tomatoNumber = Tomatoes.Count;
     }
 }

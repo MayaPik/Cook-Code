@@ -32,6 +32,9 @@ TagManager:
   - programmer
   - ButtonPlay
   - PracticeButton
+  - FPSCamera
+  - table
+  - ButtonPractice
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,7 @@ using UnityEngine;
 public class FlickeringLight : MonoBehaviour
 {
     [SerializeField] Light flickeringLight;
-    [SerializeField] float duration = 1f;
+    float duration = 1f;
     private bool isFlickering = true;
     private float timer = 0f;
 

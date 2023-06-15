@@ -36,10 +36,11 @@ public class LevelLoader : MonoBehaviour
         else
         {
             SceneManager.LoadSceneAsync(continuouslyRunningSceneName, LoadSceneMode.Additive);
-			if (!currentScene.isLoaded) 
+			if (!currentScene.isLoaded && currentScene.buildIndex != -1)
 			{
 				SceneManager.LoadSceneAsync(levelToLoadOnClick, LoadSceneMode.Additive);
-			}   
+			}
+
 		}
     }
 }

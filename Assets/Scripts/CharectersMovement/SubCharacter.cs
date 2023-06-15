@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class SubCharacter : MonoBehaviour
 {
-    [SerializeField] GameObject table;
-    [SerializeField] GameObject tomatoPrefab; 
-    [SerializeField] GameObject hand;
-    [SerializeField] GameObject poolOfObjects;
+    private GameObject table;
+    private GameObject hand;
+    private GameObject poolOfObjects;
     Animator subPlayerAnimator;
+    [SerializeField] GameObject tomatoPrefab; 
     [SerializeField] Player player;
     [SerializeField] TomatoStatus tomatoStatus;
 
+    private void Awake()
+    {
+        table = GameObject.FindGameObjectWithTag("table");
+        hand = GameObject.FindGameObjectWithTag("hand");
+        poolOfObjects = GameObject.Find("PoolOfObjects");
+    }
     private void Start()
     {
         subPlayerAnimator = GetComponent<Animator>();

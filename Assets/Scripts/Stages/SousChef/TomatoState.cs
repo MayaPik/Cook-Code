@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class TomatoState : MonoBehaviour
 {
-    [SerializeField] TomatoStatus tomatoStatus;
-    [SerializeField] int currentTomatoNumber;
     [SerializeField] GameObject chef;
+    [SerializeField] TomatoStatus tomatoStatus;
+    int currentTomatoNumber;
     private float timeToPickTomato = 1f;
     Animator animator;
 

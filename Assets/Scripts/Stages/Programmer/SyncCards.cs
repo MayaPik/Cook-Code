@@ -13,6 +13,7 @@ public class SyncCards : MonoBehaviour
     [SerializeField] GameObject nextScreenButton;
     private string sceneMode = "SyncExplained";
 
+
     private void Start()
     {
         currentIndex = 0;

@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class CameraChanges : MonoBehaviour
 {
-    [SerializeField] Camera mainCamera;
-    [SerializeField] Camera fpsCamera;
+    private Camera mainCamera;
+    private Camera fpsCamera;
 
-    private void Start()
-    {
-        ChangeCamera(mainCamera);
-    }
+   private void Awake()
+{
+    mainCamera = GameObject.Find("MainCamera").GetComponent<Camera>();
+    fpsCamera = GameObject.Find("FPSCamera").GetComponent<Camera>();
+
+    ChangeToMain();
+}
 
     public void ChangeToMain()
     {

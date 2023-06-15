@@ -7,12 +7,10 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] string Worldname;
     [SerializeField] string NextWorldname;
-    private int totalstars = 0;
     [SerializeField] GameObject[] Levellockbuttons;
     [SerializeField] GameObject spotlight;
+    private int totalstars = 0;
     private bool keycheck;
-    private int temp;
-
 
     void Start()
     {

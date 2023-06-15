@@ -5,8 +5,8 @@ using UnityEngine;
 public class LevelProgressSever : MonoBehaviour
 {
     [SerializeField] GameObject nextObject;
-    [SerializeField]  int LevelToUnlock;
-    [SerializeField]  string WorldName;
+    [SerializeField] int LevelToUnlock;
+    [SerializeField] string WorldName;
 
     private void Update() {
         if (nextObject.activeSelf) {

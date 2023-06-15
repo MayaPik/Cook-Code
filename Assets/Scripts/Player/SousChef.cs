@@ -26,9 +26,9 @@ public class SousChef : Player
         }
         else if (itemGameObject.GetComponent<Item>().type == Item.TypeOptions.Destination)
         {
-        yield return new WaitUntil(() => tomatoStatus.tomatoNumber<= 1);
-         animator.SetTrigger("Idle");
-        animator.SetTrigger("Walk");   
+        yield return new WaitUntil(() => tomatoStatus.tomatoNumber <= 1);
+        animator.SetTrigger("Idle");
+        animator.SetTrigger("Walk");
         yield return StartCoroutine(GoToDestination(itemGameObject));
         animator.SetTrigger("Idle");
         if (itemGameObject.tag == "chef")

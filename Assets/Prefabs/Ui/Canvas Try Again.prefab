@@ -119,5 +119,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Try Again
       objectReference: {fileID: 0}
+    - target: {fileID: 4591357603137494305, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591357603137494305, guid: da38dcaabc9514e76bd862217cbff601, type: 3}
+      propertyPath: m_TagString
+      value: ButtonAgain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da38dcaabc9514e76bd862217cbff601, type: 3}

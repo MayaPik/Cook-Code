@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class PlaceOnTableAction : ObjectAction
 {
-    [SerializeField] GameObject poolOfObjects;
-    [SerializeField] GameObject table;
+    private GameObject poolOfObjects;
+    private GameObject table;
+
+    private void Awake()
+    {
+        table = GameObject.FindGameObjectWithTag("table");
+        poolOfObjects = GameObject.Find("PoolOfObjects");
+    }
 
     public override void PerformAction()
     {

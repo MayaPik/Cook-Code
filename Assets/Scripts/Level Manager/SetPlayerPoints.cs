@@ -5,12 +5,13 @@ using UnityEngine;
 public class SetPlayerPoints : MonoBehaviour {
 
     [SerializeField] int pointstoset;
+    private int playerPoints;
 
     public void SetPoints()
         {
-        int playerPoints = PlayerPrefs.GetInt("PlayerPoints");
-    
+        playerPoints = PlayerPrefs.GetInt("PlayerPoints");
         PlayerPrefs.SetInt("PlayerPoints",playerPoints+pointstoset);
+        
         }
 	
 }

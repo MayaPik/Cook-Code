@@ -6,7 +6,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Player))]
 public class RunFunction : MonoBehaviour
 {
-    [SerializeField] List<Slot> slots;
+    List<Slot> slots;
     [SerializeField] Player player;
     [SerializeField] GameObject buttonHome;
     [SerializeField] GameObject buttonAgain;
@@ -15,6 +15,7 @@ public class RunFunction : MonoBehaviour
     [SerializeField] string defaultTrigger;
     private Animator playerAnimator;
 
+    
     private void Start()
     {
         slots = new List<Slot>();

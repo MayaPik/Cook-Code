@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    [SerializeField] private Camera codeCamera;
+    private Camera fpsCamera;
     private Vector3 offset;
     private Slot previousSlot;
     private Slot hitSlot;
     public Vector3 originalPosition;
     private bool hover;
 
+    private void Awake()
+    {
+            fpsCamera = GameObject.Find("FPSCamera").GetComponent<Camera>();
+
+    }
     private void Start()
     {
         hover = false;
@@ -26,8 +31,8 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 GetMouseWorldPosition()
     {
         var mouseScreenPos = Input.mousePosition;
-        mouseScreenPos.z = codeCamera.WorldToScreenPoint(transform.position).z;
-        return codeCamera.ScreenToWorldPoint(mouseScreenPos);
+        mouseScreenPos.z = fpsCamera.WorldToScreenPoint(transform.position).z;
+        return fpsCamera.ScreenToWorldPoint(mouseScreenPos);
     }
 
     private void OnMouseDown()
@@ -43,8 +48,8 @@ public class DragAndDrop : MonoBehaviour
         Vector3 targetPosition = GetMouseWorldPosition() + offset;
         targetPosition.z = transform.position.z;
         transform.position = targetPosition;
-        var rayOrigin = codeCamera.transform.position;
-        var rayDirection = GetMouseWorldPosition() - codeCamera.transform.position;
+        var rayOrigin = fpsCamera.transform.position;
+        var rayDirection = GetMouseWorldPosition() - fpsCamera.transform.position;
         RaycastHit hitInfo;
 
         if (Physics.Raycast(rayOrigin, rayDirection, out hitInfo))
