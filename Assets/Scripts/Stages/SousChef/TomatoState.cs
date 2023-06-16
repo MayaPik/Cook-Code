@@ -18,12 +18,13 @@ public class TomatoState : MonoBehaviour
             if (child.gameObject.activeSelf)
             {
                 tomatoStatus.Tomatoes.Add(child.gameObject);
+                tomatoStatus.FullTomatoes.Add(child.gameObject);
             }
         }
         currentTomatoNumber = tomatoStatus.Tomatoes.Count;
         StartCoroutine(DecreaseTomatoCount());
     }
-
+    
     private void Update()
     {
         currentTomatoNumber = tomatoStatus.Tomatoes.Count;

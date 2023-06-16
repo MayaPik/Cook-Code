@@ -1239,7 +1239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3139586954122140586, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3139586954122140586, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
       propertyPath: m_LocalScale.x
@@ -1325,7 +1325,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onMouseDownEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 825387763}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   locked: 0
   text: {fileID: 1092685290}
 --- !u!1 &868118559
@@ -2980,8 +2992,8 @@ RectTransform:
   - {fileID: 1912559703}
   - {fileID: 1913467387}
   - {fileID: 1347073258}
-  - {fileID: 1849676350}
   - {fileID: 825387761}
+  - {fileID: 1849676350}
   - {fileID: 445449571}
   m_Father: {fileID: 1806163838}
   m_RootOrder: 0
@@ -3148,7 +3160,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5415816030529328454, guid: 934e63f0c03c54914a1f2caf4dfc45f3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5415816030529328454, guid: 934e63f0c03c54914a1f2caf4dfc45f3, type: 3}
       propertyPath: m_LocalScale.x

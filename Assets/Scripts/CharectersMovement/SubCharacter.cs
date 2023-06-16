@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SubCharacter : MonoBehaviour
 {
-    private GameObject table;
-    private GameObject hand;
-    private GameObject poolOfObjects;
+    [SerializeField] private GameObject table;
+    [SerializeField] private GameObject hand;
+    [SerializeField] private GameObject poolOfObjects;
     Animator subPlayerAnimator;
     [SerializeField] GameObject tomatoPrefab; 
     [SerializeField] Player player;
@@ -15,7 +15,7 @@ public class SubCharacter : MonoBehaviour
     private void Awake()
     {
         table = GameObject.FindGameObjectWithTag("table");
-        hand = GameObject.FindGameObjectWithTag("hand");
+        hand = GameObject.FindGameObjectWithTag("Hand");
         poolOfObjects = GameObject.Find("PoolOfObjects");
     }
     private void Start()

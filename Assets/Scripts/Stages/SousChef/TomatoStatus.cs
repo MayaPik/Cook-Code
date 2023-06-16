@@ -5,12 +5,11 @@ using System.Collections.Generic;
 public class TomatoStatus : ScriptableObject
 {
     public List<GameObject> Tomatoes = new List<GameObject>();
-    private List<GameObject> FullTomatoes;
+    public List<GameObject> FullTomatoes;
     public int tomatoNumber;
 
     private void OnEnable()
     {
-        FullTomatoes = new List<GameObject>(Tomatoes);
         tomatoNumber = Tomatoes.Count;
     }
 
@@ -28,8 +27,11 @@ public class TomatoStatus : ScriptableObject
 
     public void RestartTomatoes()
     {
+        Debug.Log(FullTomatoes.Count);
         Tomatoes.Clear();
         Tomatoes.AddRange(FullTomatoes);
+        Debug.Log(Tomatoes.Count);
+
         foreach (GameObject tomato in Tomatoes)
         {
             tomato.SetActive(true);
