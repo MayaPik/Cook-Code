@@ -17,7 +17,6 @@ public class Dishwasher : Player
        if (slot.gameObject.GetComponent<PlayerDebugged>().enabled)
        {
        
-        Debug.Log("here");
         transform.position = originalPosition;
         transform.rotation = originalRotation;
         animator.SetTrigger("Idle");
@@ -42,8 +41,6 @@ public class Dishwasher : Player
         animator.SetTrigger("Idle");
         animator.SetTrigger("Walk");
         yield return StartCoroutine(GoToLocation(originalPosition));
-                Debug.Log("here2");
-
        }
     }
 }

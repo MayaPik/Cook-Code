@@ -74,9 +74,7 @@ public class RunFunction : MonoBehaviour
             continue;
         }
         yield return new WaitForSeconds(0.1f); 
-        Debug.Log("before coroutine");
         yield return StartCoroutine(player.GetItem(slot, slot.draggedObject, playerAnimator, hand));
-        Debug.Log("after coroutine");
 
         if (player.shouldBreakLoop)
         {

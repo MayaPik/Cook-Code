@@ -1301,6 +1301,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8916908749715170831, guid: e65b334f568873344b7c278fbd4a5018, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65b334f568873344b7c278fbd4a5018, type: 3}
 --- !u!4 &1546988793 stripped
@@ -1946,6 +1950,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 20.000002
       objectReference: {fileID: 0}
+    - target: {fileID: 2718328023916409033, guid: 6271ec1f434a14efeab8db6b012c473e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3249541164025497840, guid: 6271ec1f434a14efeab8db6b012c473e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -71.0002
@@ -2026,6 +2034,17 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 802884357}
+    - target: {fileID: 9189685505040843727, guid: 6271ec1f434a14efeab8db6b012c473e, type: 3}
+      propertyPath: m_text
+      value: '[
+
+
+
+
+
+
+        ]'
+      objectReference: {fileID: 0}
     - target: {fileID: 9189685505803097149, guid: 6271ec1f434a14efeab8db6b012c473e, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2400,7 +2419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9048918996826533491, guid: b02e2fd69747a40e299565c1766255bb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9048918996826533491, guid: b02e2fd69747a40e299565c1766255bb, type: 3}
       propertyPath: field of view

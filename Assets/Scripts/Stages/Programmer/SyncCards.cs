@@ -124,7 +124,6 @@ public class SyncCards : MonoBehaviour
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
             if (stateInfo.IsTag("Movement"))
             {
-                Debug.Log("Move");
                 StartCoroutine(WaitForAnimationFinish(animator));
                 yield break;
             }

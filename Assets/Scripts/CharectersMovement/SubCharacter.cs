@@ -34,7 +34,6 @@ public class SubCharacter : MonoBehaviour
             }
             else
             {
-                // Handle case when there are no tomatoes available
                 Debug.Log("No tomatoes available.");
             }
             yield return null;
