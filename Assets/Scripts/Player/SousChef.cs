@@ -19,11 +19,18 @@ public class SousChef : Player
             }
         }
         else if (itemGameObject.GetComponent<Item>().type == Item.TypeOptions.Object) {
+
         animator.SetTrigger("Idle");
         animator.SetTrigger("Bend");
         yield return new WaitForSeconds(2f);
-        yield return StartCoroutine(GrabItemCoroutine(itemGameObject, hand));
+        GameObject item = Instantiate(itemGameObject);
+        Item itemComponent = item.GetComponent<Item>();
+        item.transform.localScale = itemComponent.ObjectSize;
+        item.transform.localPosition = itemComponent.ObjectLocation;
+        item.transform.localRotation = itemComponent.ObjectRotation;
+        yield return StartCoroutine(GrabItemCoroutine(item, hand));
         }
+
         else if (itemGameObject.GetComponent<Item>().type == Item.TypeOptions.Destination)
         {
         yield return new WaitUntil(() => tomatoStatus.tomatoNumber <= 1);

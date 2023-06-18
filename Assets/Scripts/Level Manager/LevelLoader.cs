@@ -6,13 +6,38 @@ public class LevelLoader : MonoBehaviour
     public string levelToLoadOnClick;
     private string continuouslyRunningSceneName = "Environment";
 	[SerializeField] bool mainScreen;
+	[SerializeField] bool sameLevel;
 
 	public void Update() {
+
 		if (mainScreen)
 		{
 			 levelToLoadOnClick = "MainScene";
 		}
+		else if (sameLevel)
+		{
+			Scene activeScene = SceneManager.GetActiveScene();
+
+			for (int i = 0; i < SceneManager.sceneCount; i++)
+			{
+				Scene scene = SceneManager.GetSceneAt(i);
+
+				if (scene != activeScene && scene.name != continuouslyRunningSceneName)
+				{
+					levelToLoadOnClick = scene.name;
+					break;
+				}
+			}
+		}
+
 	}
+
+	public void RestartLevel()
+	{
+		SceneManager.UnloadSceneAsync(levelToLoadOnClick);
+		SceneManager.LoadSceneAsync(levelToLoadOnClick, LoadSceneMode.Additive);
+	}
+
     public void LoadLevel()
     {
         Scene environmentScene = SceneManager.GetSceneByName(continuouslyRunningSceneName);

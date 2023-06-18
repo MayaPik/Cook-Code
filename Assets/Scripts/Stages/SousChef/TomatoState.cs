@@ -12,13 +12,15 @@ public class TomatoState : MonoBehaviour
     private void Awake()
     {
         animator = chef.GetComponent<Animator>();
-        tomatoStatus.Tomatoes.Clear(); // Clear the list before adding active tomatoes
+        tomatoStatus.Tomatoes.Clear();
+        tomatoStatus.FullTomatoes.Clear(); 
         foreach (Transform child in transform)
         {
             if (child.gameObject.activeSelf)
             {
                 tomatoStatus.Tomatoes.Add(child.gameObject);
                 tomatoStatus.FullTomatoes.Add(child.gameObject);
+                //TODO: FIX TOMATO STATE;
             }
         }
         currentTomatoNumber = tomatoStatus.Tomatoes.Count;

@@ -35,6 +35,8 @@ TagManager:
   - FPSCamera
   - table
   - ButtonPractice
+  - Sink
+  - Dirty
   layers:
   - Default
   - TransparentFX

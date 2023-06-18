@@ -103,6 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8343157751390105285}
+  - component: {fileID: 2052482838}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -130,6 +131,20 @@ Transform:
   m_Father: {fileID: 866554410547281963}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2052482838
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208015682492732844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.16777107
+  m_Height: 0.614392
+  m_Direction: 1
+  m_Center: {x: -0.20876056, y: 0.106173754, z: 0.12346734}
 --- !u!1 &247653530520103585
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3139586954122140586}
   - component: {fileID: 9039324131851190736}
+  - component: {fileID: 576992152}
   m_Layer: 0
   m_Name: Dishwasher
   m_TagString: Untagged
@@ -889,8 +905,8 @@ Transform:
   m_GameObject: {fileID: 2367166207852200208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1314, y: 2.1314, z: 2.1314}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.8199995, y: 2.82, z: 2.8199995}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7950622901791854664}
   - {fileID: 6580563352004958139}
@@ -907,7 +923,7 @@ Animator:
   m_GameObject: {fileID: 2367166207852200208}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 063f57aa0c5cbdb4b82dc6baa11e8458, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59e3124335cc24d08a3c17790c28c5d5, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -918,6 +934,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &576992152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367166207852200208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e8606448feb4bafa466dae7e8789de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shouldBreakLoop: 0
+  originalPosition: {x: 0, y: 0, z: 0}
+  isMain: 0
+  destination: {fileID: 0}
 --- !u!1 &2720451679363677631
 GameObject:
   m_ObjectHideFlags: 0

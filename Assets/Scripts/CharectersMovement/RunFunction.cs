@@ -27,6 +27,10 @@ public class RunFunction : MonoBehaviour
         {
             buttonHome.SetActive(false);
         }
+        if (buttonAgain != null) 
+        {
+            buttonAgain.SetActive(false);
+        }
     }
 
     private void CollectChildSlots(Transform parent)
@@ -51,97 +55,125 @@ public class RunFunction : MonoBehaviour
         {
             return;
         }
-        DestroyPoolOfObjects();
+        if (player.GetType() == typeof(Dishwasher))
+        {
+            player.transform.position = player.originalPosition;
+            playerAnimator.SetTrigger("Idle");
+        }
+        // DestroyPoolOfObjects();
         StartCoroutine(GrabItemsCoroutine());
     }
 
     private IEnumerator GrabItemsCoroutine()
+{
+    foreach (Slot slot in slots)
     {
-        foreach (Slot slot in slots)
+        if (slot.draggedObject == null)
         {
-            if (slot.draggedObject != null)
-            {
-                yield return StartCoroutine(player.GetItem(slot, slot.draggedObject, playerAnimator, hand));
-            }
-             if (player.shouldBreakLoop)
+            // Skip to the next slot if draggedObject is null
+            continue;
+        }
+        yield return new WaitForSeconds(0.1f); 
+        Debug.Log("before coroutine");
+        yield return StartCoroutine(player.GetItem(slot, slot.draggedObject, playerAnimator, hand));
+        Debug.Log("after coroutine");
+
+        if (player.shouldBreakLoop)
         {
             break; // Exit the loop if shouldBreakLoop is true
         }
-        }
-
-        CheckIfCorrect();
     }
 
-    private void CheckIfCorrect()
+    CheckIfCorrect();
+}
+
+private void CheckIfCorrect()
+{
+    bool isCorrect = true;
+
+    foreach (Slot slot in slots)
     {
-        foreach (Slot slot in slots)
+        if (slot.draggedObject == null)
         {
-            if (slot.draggedObject == null)
-            {
-                TryAgain();
-                return;
-            }
-            else
-            {
-                string droppedTag = slot.draggedObject.tag;
-                if (slot.tag != droppedTag)
-                {
-                    TryAgain();
-                    return;
-                }
-            }
+            isCorrect = false;
+            break;
         }
 
-        if (buttonHome != null)
+        string droppedTag = slot.draggedObject.tag;
+
+        if (player.GetType() == typeof(Dishwasher))
         {
-            buttonHome.SetActive(true);
+            if ((slot.gameObject.GetComponent<PlayerDebugged>().enabled ^ slot.tag == "Dirty"))
+            {
+                isCorrect = false;
+                break;
+            }
+        }
+        else if (slot.tag != droppedTag)
+        {
+            isCorrect = false;
+            break;
         }
     }
+
+    if (!isCorrect)
+    {
+        TryAgain();
+        return;
+    }
+
+    if (buttonHome != null)
+    {
+        buttonHome.SetActive(true);
+    }
+}
+
+
 
     private void TryAgain()
     {
         if (buttonAgain != null)
         {
-            EmptyHands();
-            player.transform.position = player.originalPosition;
-            playerAnimator.SetTrigger("Idle");
+            // EmptyHands();
+            // player.transform.position = player.originalPosition;
+            // playerAnimator.SetTrigger("Idle");
             buttonAgain.SetActive(true);
-            DestroyPoolOfObjects();
+            // DestroyPoolOfObjects();
         }
     }
-
-   private void EmptyHands()
-{
-    Item itemInHand = hand.GetComponentInChildren<Item>();
-
-    if (itemInHand != null)
-    {
-        GameObject objectInHand = itemInHand.gameObject;
-        objectInHand.transform.SetParent(poolOfObjects.transform, false);
-    }
-    else
-    {
-        return;
-    }
-}
-
-
-    private void DestroyPoolOfObjects()
-    {
-        if (poolOfObjects.transform.childCount > 0)
-        {
-            int childCount = poolOfObjects.transform.childCount;
-
-            for (int i = childCount - 1; i >= 0; i--)
-            {
-                GameObject childObject = poolOfObjects.transform.GetChild(i).gameObject;
-                Destroy(childObject);
-            }
-        }
-    }
-
-    public void HomeScreen()
+     public void HomeScreen()
     {
         SceneManager.LoadScene("SyncMain");
     }
+    
+
+//    private void EmptyHands()
+//     {
+//     Item itemInHand = hand.GetComponentInChildren<Item>();
+
+//     if (itemInHand != null)
+//     {
+//         GameObject objectInHand = itemInHand.gameObject;
+//         objectInHand.transform.SetParent(poolOfObjects.transform, false);
+//     }
+//     else
+//     {
+//         return;
+//     }
+//     }
+
+
+//     private void DestroyPoolOfObjects()
+//     {
+//         if (poolOfObjects.transform.childCount > 0)
+//         {
+//             int childCount = poolOfObjects.transform.childCount;
+
+//             for (int i = childCount - 1; i >= 0; i--)
+//             {
+//                 GameObject childObject = poolOfObjects.transform.GetChild(i).gameObject;
+//                 Destroy(childObject);
+//             }
+//         }
+//     }
 }

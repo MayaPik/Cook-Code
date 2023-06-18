@@ -20,7 +20,14 @@ public class Slot : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer) {
         regularSprite = spriteRenderer.sprite;
+        }
+    }
+
+    public void PlaceItemInSlot(GameObject gameObject)
+    {
+        draggedObject = gameObject;
     }
 
     public void OnDrop(GameObject dragged)
@@ -44,7 +51,9 @@ public class Slot : MonoBehaviour
         draggedObject = null;
     }
 
-    public void HoverColor(bool standby)
+   public void HoverColor(bool standby)
+{
+    if (spriteRenderer != null && regularSprite != null && hoverSprite != null)
     {
         if (standby)
         {
@@ -55,4 +64,6 @@ public class Slot : MonoBehaviour
             spriteRenderer.sprite = regularSprite;
         }
     }
+}
+
 }
