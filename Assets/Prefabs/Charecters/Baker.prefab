@@ -940,9 +940,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673792106042230112}
+  - component: {fileID: 6279935685744183076}
   m_Layer: 0
   m_Name: RightHand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -967,6 +968,20 @@ Transform:
   m_Father: {fileID: 2703261756376170958}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6279935685744183076
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858050511402077338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.14865708
+  m_Height: 0.64571947
+  m_Direction: 1
+  m_Center: {x: 0.042092875, y: -0.012776217, z: 0.017723234}
 --- !u!1 &4037084635025862080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1572,7 @@ Animator:
   m_GameObject: {fileID: 7171499591381488406}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 443dd08015e6d55459070e5e84c890d2, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc3d054d89639954e8ee2659896502eb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

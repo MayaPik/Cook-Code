@@ -7,7 +7,7 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     public bool shouldBreakLoop = false;
     public Vector3 originalPosition;
     public Quaternion originalRotation;
-    
+    [SerializeField] public ParticleSystem actionParticles; // Reference to the ParticleSystem
     [SerializeField] protected bool isMain;
 
     protected virtual void Start() //The "virtual" keyword allows derived classes to override this method with their own implementation.
@@ -15,7 +15,6 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
         animator = GetComponent<Animator>();
         originalPosition = transform.position;
         originalRotation = transform.rotation;
-
     }
 
     public abstract IEnumerator GetItem(Slot slot, GameObject itemGameObject, Animator animator, GameObject hand);
@@ -51,15 +50,16 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
             item.transform.SetParent(handCollider.transform, false);
         }
     }
-        // particle.gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
+        if (actionParticles != null)
+        {
+                actionParticles.Play(); // Start the ParticleSystem
+        }
         ObjectAction objectAction = item.GetComponent<ObjectAction>();
         if (objectAction != null)
         {
             objectAction.PerformAction();
         }
-
-        // particle.gameObject.SetActive(false);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Bending") == false);
         transform.rotation = Quaternion.Euler(0, 180, 0);
     }

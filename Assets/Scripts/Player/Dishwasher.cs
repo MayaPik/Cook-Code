@@ -5,7 +5,6 @@ public class Dishwasher : Player
 {
     [SerializeField] GameObject destination;
     [SerializeField] GameObject poolOfObjects;
-    [SerializeField] ParticleSystem scrubParticles; // Reference to the ParticleSystem
 
     public override IEnumerator GetItem(Slot slot, GameObject itemGameObject, Animator animator, GameObject hand)
     {
@@ -32,9 +31,9 @@ public class Dishwasher : Player
         yield return StartCoroutine(GoToLocation(destination.transform.position));
         animator.SetTrigger("Idle");
         animator.SetTrigger("Scrub");
-           if (scrubParticles != null)
+           if (actionParticles != null)
             {
-                scrubParticles.Play(); // Start the ParticleSystem
+                actionParticles.Play(); // Start the ParticleSystem
             }
         yield return new WaitForSeconds(1f);
         item.transform.SetParent(poolOfObjects.transform, false);

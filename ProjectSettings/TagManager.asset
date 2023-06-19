@@ -37,6 +37,9 @@ TagManager:
   - ButtonPractice
   - Sink
   - Dirty
+  - Particle
+  - 8
+  - 9
   layers:
   - Default
   - TransparentFX

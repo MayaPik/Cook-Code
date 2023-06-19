@@ -1040,6 +1040,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4480435777026467984, guid: 5d6833ab682824c77becf4fd82c450fe, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dc3d054d89639954e8ee2659896502eb, type: 2}
     - target: {fileID: 4553491493813881054, guid: 5d6833ab682824c77becf4fd82c450fe, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -70
@@ -1148,6 +1152,10 @@ PrefabInstance:
       propertyPath: m_VerticalAlignment
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 6681341291972256548, guid: 5d6833ab682824c77becf4fd82c450fe, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dc3d054d89639954e8ee2659896502eb, type: 2}
     - target: {fileID: 6818990494816531293, guid: 5d6833ab682824c77becf4fd82c450fe, type: 3}
       propertyPath: m_IsActive
       value: 1

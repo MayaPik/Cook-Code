@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sync/Dishwasher.unity
     guid: 2c334781f2fd249dfb4b541bc3695e41
+  - enabled: 1
+    path: Assets/Scenes/Sync/Baker.unity
+    guid: 31a00269a13c24e15878e3802afb9b5b
   m_configObjects: {}
