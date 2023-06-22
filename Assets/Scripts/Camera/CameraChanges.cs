@@ -6,12 +6,11 @@ public class CameraChanges : MonoBehaviour
     private Camera fpsCamera;
 
    private void Awake()
-{
+    {
     mainCamera = GameObject.Find("MainCamera").GetComponent<Camera>();
     fpsCamera = GameObject.Find("FPSCamera").GetComponent<Camera>();
-
     ChangeToMain();
-}
+    }
 
     public void ChangeToMain()
     {

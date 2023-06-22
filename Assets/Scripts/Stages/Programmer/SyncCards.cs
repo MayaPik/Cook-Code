@@ -9,8 +9,12 @@ public class SyncCards : MonoBehaviour
     private List<Animator> childAnimators;
     private List<Button> buttons;
     private int currentIndex = 0;
-    [SerializeField] GameObject practiceButton;
-    [SerializeField] GameObject nextScreenButton;
+     public ButtonReferences buttonReferences;
+    [SerializeField] GameObject WinPanel;
+    [SerializeField] GameObject PracticePanel;
+    [SerializeField] GameObject[] ToolsForExplain;
+    [SerializeField] GameObject[] ToolsForPractice;
+
     private string sceneMode = "SyncExplained";
 
 
@@ -18,6 +22,8 @@ public class SyncCards : MonoBehaviour
     {
         currentIndex = 0;
         string sceneName = SceneManager.GetActiveScene().name;
+        WinPanel = buttonReferences.WinPanel;
+        PracticePanel = buttonReferences.PracticePanel;
         childAnimators = new List<Animator>();
         buttons = new List<Button>();
         CollectChildAnimators(transform);
@@ -28,13 +34,13 @@ public class SyncCards : MonoBehaviour
             animator.enabled = false;
         }
 
-        if (practiceButton != null)
+        if (PracticePanel != null)
         {
-            practiceButton.SetActive(false);
+            PracticePanel.SetActive(false);
         }
-        if (nextScreenButton != null)
+        if (WinPanel != null)
         {
-            nextScreenButton.SetActive(false);
+            WinPanel.SetActive(false);
         }
 
         // Start playing the animations
@@ -92,11 +98,11 @@ public class SyncCards : MonoBehaviour
 
             if (sceneMode == "SyncExplained")
             {
-                practiceButton.SetActive(true);
+                PracticePanel.SetActive(true);
             }
             else if (sceneMode == "SyncPractice")
             {
-                nextScreenButton.SetActive(true);
+                WinPanel.SetActive(true);
             }
 
             return;
@@ -110,6 +116,7 @@ public class SyncCards : MonoBehaviour
         {
             currentAnimator.SetTrigger("MoveManual");
             StartCoroutine(WaitForAnimationFinish(currentAnimator));
+
         }
         else if (sceneMode == "SyncPractice")
         {
@@ -124,6 +131,7 @@ public class SyncCards : MonoBehaviour
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
             if (stateInfo.IsTag("Movement"))
             {
+                
                 StartCoroutine(WaitForAnimationFinish(animator));
                 yield break;
             }
@@ -134,15 +142,20 @@ public class SyncCards : MonoBehaviour
 
     private IEnumerator WaitForAnimationFinish(Animator animator)
     {
+        GameObject ActiveTool = (sceneMode == "SyncExplained") ? ToolsForExplain[currentIndex] : ToolsForPractice[currentIndex];
+        ActiveTool.SetActive(true);
+
         // Wait until the current animation is finished
         while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
         {
+           
             yield return null;
         }
 
         // Disable the current animator and move to the next one
         animator.enabled = false;
         currentIndex++;
+        ActiveTool.SetActive(false);
 
         // Play the next animation
         PlayNextAnimation(SceneManager.GetActiveScene().name);

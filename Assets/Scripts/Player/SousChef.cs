@@ -4,6 +4,7 @@ using UnityEngine;
 public class SousChef : Player
 {
     [SerializeField] TomatoStatus tomatoStatus; 
+
     public override IEnumerator GetItem(Slot slot, GameObject itemGameObject, Animator animator, GameObject hand)
     {
         yield return StartCoroutine(GetItemCoroutine(slot, itemGameObject, animator, hand));
@@ -23,11 +24,11 @@ public class SousChef : Player
         animator.SetTrigger("Idle");
         animator.SetTrigger("Bend");
         yield return new WaitForSeconds(2f);
+
         GameObject item = Instantiate(itemGameObject);
         Item itemComponent = item.GetComponent<Item>();
-        item.transform.localScale = itemComponent.ObjectSize;
-        item.transform.localPosition = itemComponent.ObjectLocation;
-        item.transform.localRotation = itemComponent.ObjectRotation;
+        SetItemProperties(item, itemComponent);
+
         yield return StartCoroutine(GrabItemCoroutine(item, hand));
         }
 
@@ -35,9 +36,11 @@ public class SousChef : Player
         {
         yield return new WaitUntil(() => tomatoStatus.tomatoNumber <= 1);
         animator.SetTrigger("Idle");
+        
         animator.SetTrigger("Walk");
         yield return StartCoroutine(GoToDestination(itemGameObject));
         animator.SetTrigger("Idle");
+
         if (itemGameObject.tag == "chef")
         {
         tomatoStatus.RestartTomatoes();

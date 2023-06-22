@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 39809444}
   - component: {fileID: 39809443}
   m_Layer: 0
-  m_Name: 'Game Manager '
+  m_Name: Game Manager Stage 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextObject: {fileID: 1159532711}
-  LevelToUnlock: 5
+  LevelToUnlock: 6
   WorldName: Sync
 --- !u!4 &39809445
 Transform:
@@ -1693,26 +1693,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8230127132402444779, guid: b24f3965d3af849f6b84a7cd076cbe6d, type: 3}
   m_PrefabInstance: {fileID: 907506552}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &907506554 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8230127134101281444, guid: b24f3965d3af849f6b84a7cd076cbe6d, type: 3}
+--- !u!114 &907506555 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8767105734370155381, guid: b24f3965d3af849f6b84a7cd076cbe6d, type: 3}
   m_PrefabInstance: {fileID: 907506552}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &907506555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907506554}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa2d095f3e0944cb8bd331047a626f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoadOnClick: 
-  mainScreen: 0
-  sameLevel: 0
 --- !u!1 &957647593
 GameObject:
   m_ObjectHideFlags: 0

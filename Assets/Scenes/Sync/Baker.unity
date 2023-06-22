@@ -1690,7 +1690,7 @@ GameObject:
   - component: {fileID: 1543049784}
   - component: {fileID: 1543049783}
   m_Layer: 0
-  m_Name: 'Game Manager '
+  m_Name: Game Manager Stage 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextObject: {fileID: 519170689}
-  LevelToUnlock: 4
+  LevelToUnlock: 5
   WorldName: Sync
 --- !u!4 &1543049785
 Transform:

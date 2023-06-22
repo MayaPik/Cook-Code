@@ -11,9 +11,9 @@ public class DragAndDrop : MonoBehaviour
 
     private void Awake()
     {
-            fpsCamera = GameObject.Find("FPSCamera").GetComponent<Camera>();
-
+    fpsCamera = GameObject.Find("FPSCamera").GetComponent<Camera>();
     }
+    
     private void Start()
     {
         hover = false;

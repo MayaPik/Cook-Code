@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sync/Baker.unity
     guid: 31a00269a13c24e15878e3802afb9b5b
+  - enabled: 1
+    path: Assets/Scenes/Sync/Waiter.unity
+    guid: eafe24a3f47fc4a28ba3d21cd2e05920
   m_configObjects: {}

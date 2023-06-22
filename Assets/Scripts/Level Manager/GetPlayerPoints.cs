@@ -12,6 +12,6 @@ public class GetPlayerPoints : MonoBehaviour
         playerPoints = PlayerPrefs.GetInt("PlayerPoints");
 
         // Update the TextMeshProUGUI component with the player points
-        text.text = "TOKENS: " + playerPoints.ToString();
+        text.text = playerPoints.ToString();
     }
 }

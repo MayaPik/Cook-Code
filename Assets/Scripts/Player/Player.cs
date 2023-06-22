@@ -8,7 +8,6 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     public Vector3 originalPosition;
     public Quaternion originalRotation;
     [SerializeField] public ParticleSystem actionParticles; // Reference to the ParticleSystem
-    [SerializeField] protected bool isMain;
 
     protected virtual void Start() //The "virtual" keyword allows derived classes to override this method with their own implementation.
     {
@@ -86,9 +85,12 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     }
 }
 
+    protected void SetItemProperties(GameObject item, Item itemComponent)
+    {
+        item.transform.localScale = itemComponent.ObjectSize;
+        item.transform.localPosition = itemComponent.ObjectLocation;
+        item.transform.localRotation = itemComponent.ObjectRotation;
+    }
+
+
 }
-
-
-
-     
-    

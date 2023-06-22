@@ -1,0 +1,17 @@
+{
+    "levels": [
+      {
+        "level": "Chef",
+        "text": "Help the chef make the soup! Place the Stove on the table, above it place the Pot. Pour some oil, add tomato and then cover the pot."
+      },
+      {
+        "level": 2,
+        "text": "Text for level 2"
+      },
+      {
+        "level": 3,
+        "text": "Text for level 3"
+      }
+    ]
+  }
+  

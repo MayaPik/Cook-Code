@@ -1083,7 +1083,7 @@ Transform:
   - {fileID: 1778989861}
   - {fileID: 3792299427183228564}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1153129004 stripped
 GameObject:
@@ -1168,7 +1168,7 @@ GameObject:
   - component: {fileID: 1543049784}
   - component: {fileID: 1543049783}
   m_Layer: 0
-  m_Name: 'Game Manager '
+  m_Name: Game Manager Stage 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1200,7 +1200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextObject: {fileID: 519170689}
-  LevelToUnlock: 6
+  LevelToUnlock: 7
   WorldName: Sync
 --- !u!4 &1543049785
 Transform:
@@ -1209,13 +1209,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543049782}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -64.48333, y: -3.527152, z: 58.26521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1621449019 stripped
 GameObject:

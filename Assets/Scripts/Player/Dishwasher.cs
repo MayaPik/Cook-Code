@@ -15,7 +15,7 @@ public class Dishwasher : Player
     {
        if (slot.gameObject.GetComponent<PlayerDebugged>().enabled)
        {
-       
+
         transform.position = originalPosition;
         transform.rotation = originalRotation;
         animator.SetTrigger("Idle");

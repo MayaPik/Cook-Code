@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3582321437611378891
 Transform:
   m_ObjectHideFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4250596446323577457}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 312, y: -205.8772, z: 0}
   m_LocalScale: {x: 367.9, y: 272.81555, z: 230.65236}
   m_ConstrainProportionsScale: 1
@@ -112,9 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4517630a7d9234c40a8de7c51df181a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  codeCamera: {fileID: 0}
   originalPosition: {x: 0, y: 0, z: 0}
-  hover: 0
 --- !u!114 &8435097213619033154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,3 +128,4 @@ MonoBehaviour:
   objectLocation: {x: 0, y: 0.15, z: 0.06}
   objectRotation: {x: 0.7032332, y: -0.7032332, z: 0.073912755, w: -0.073912755}
   objectSize: {x: 1, y: 1, z: 1}
+  type: 0

@@ -49,9 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4517630a7d9234c40a8de7c51df181a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  codeCamera: {fileID: 0}
   originalPosition: {x: 0, y: 0, z: 0}
-  hover: 0
 --- !u!65 &6449640660551468725
 BoxCollider:
   m_ObjectHideFlags: 0

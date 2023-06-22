@@ -11,6 +11,7 @@ public class Baker : Player
     private IEnumerator GetItemCoroutine(Slot slot, GameObject itemGameObject, Animator animator, GameObject hand)
     {
         int timesToRepeat = int.Parse(itemGameObject.tag);
+        Debug.Log(timesToRepeat);
         animator.SetTrigger("Idle");
 
         for (int i = 0; i < timesToRepeat; i++)
@@ -26,9 +27,7 @@ public class Baker : Player
         animator.SetTrigger("Roll");
         GameObject item = itemGameObject;
         Item itemComponent = item.GetComponent<Item>();
-        item.transform.localScale = itemComponent.ObjectSize;
-        item.transform.localPosition = itemComponent.ObjectLocation;
-        item.transform.localRotation = itemComponent.ObjectRotation;
+        SetItemProperties(item, itemComponent);
         yield return StartCoroutine(GrabItemCoroutine(item, hand));
            if (actionParticles != null)
             {

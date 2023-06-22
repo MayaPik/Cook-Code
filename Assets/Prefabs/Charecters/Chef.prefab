@@ -2030,10 +2030,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Olive Oil
       objectReference: {fileID: 0}
-    - target: {fileID: 4250596446323577457, guid: e6d1b36364af64790b2ee3030affc148, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6d1b36364af64790b2ee3030affc148, type: 3}
 --- !u!4 &4854857410140986615 stripped

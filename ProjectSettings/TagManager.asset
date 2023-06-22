@@ -40,6 +40,9 @@ TagManager:
   - Particle
   - 8
   - 9
+  - Drink
+  - Food
+  - Dessert
   layers:
   - Default
   - TransparentFX

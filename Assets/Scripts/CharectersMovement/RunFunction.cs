@@ -8,28 +8,30 @@ public class RunFunction : MonoBehaviour
 {
     List<Slot> slots;
     [SerializeField] Player player;
-    [SerializeField] GameObject buttonHome;
-    [SerializeField] GameObject buttonAgain;
+    public ButtonReferences buttonReferences;
+    [SerializeField] GameObject WinPanel;
+    [SerializeField] GameObject FailPanel;
     [SerializeField] GameObject hand;
     [SerializeField] GameObject poolOfObjects;
     [SerializeField] string defaultTrigger;
     private Animator playerAnimator;
 
-    
     private void Start()
     {
+        WinPanel = buttonReferences.WinPanel;
+        FailPanel = buttonReferences.FailPanel;
         slots = new List<Slot>();
         playerAnimator = player.GetComponent<Animator>();
         playerAnimator.SetTrigger(defaultTrigger);
         CollectChildSlots(transform);
 
-        if (buttonHome != null)
+        if (WinPanel != null)
         {
-            buttonHome.SetActive(false);
+            WinPanel.SetActive(false);
         }
-        if (buttonAgain != null) 
+        if (FailPanel != null) 
         {
-            buttonAgain.SetActive(false);
+            FailPanel.SetActive(false);
         }
     }
 
@@ -120,9 +122,9 @@ private void CheckIfCorrect()
         return;
     }
 
-    if (buttonHome != null)
+    if (WinPanel != null)
     {
-        buttonHome.SetActive(true);
+        WinPanel.SetActive(true);
     }
 }
 
@@ -130,12 +132,12 @@ private void CheckIfCorrect()
 
     private void TryAgain()
     {
-        if (buttonAgain != null)
+        if (FailPanel != null)
         {
             // EmptyHands();
             // player.transform.position = player.originalPosition;
             // playerAnimator.SetTrigger("Idle");
-            buttonAgain.SetActive(true);
+            FailPanel.SetActive(true);
             // DestroyPoolOfObjects();
         }
     }
