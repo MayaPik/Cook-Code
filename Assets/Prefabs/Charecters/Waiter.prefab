@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 5415816030529328454}
   - component: {fileID: 2146241375047044924}
   - component: {fileID: 1893090767}
+  - component: {fileID: 3753072004709496389}
   m_Layer: 0
   m_Name: Waiter
   m_TagString: Untagged
@@ -960,8 +961,20 @@ MonoBehaviour:
   originalPosition: {x: 0, y: 0, z: 0}
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
   actionParticles: {fileID: 0}
-  isMain: 0
   tray: {fileID: 0}
+--- !u!65 &3753072004709496389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4639560084893028348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5323722, y: 2.0074277, z: 3.1165268}
+  m_Center: {x: -0.0580527, y: 0.9929771, z: -0.6278085}
 --- !u!1 &4840645009090084086
 GameObject:
   m_ObjectHideFlags: 0

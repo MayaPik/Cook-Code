@@ -11,15 +11,18 @@ public class Baker : Player
     private IEnumerator GetItemCoroutine(Slot slot, GameObject itemGameObject, Animator animator, GameObject hand)
     {
         int timesToRepeat = int.Parse(itemGameObject.tag);
-        Debug.Log(timesToRepeat);
         animator.SetTrigger("Idle");
+        if (timesToRepeat == 0) 
+        {
+            yield return StartCoroutine(BreakParentLoop());
 
+        }
+        else {
         for (int i = 0; i < timesToRepeat; i++)
         {
             yield return StartCoroutine(BakingCoroutine(animator,itemGameObject, hand));
         }
-
-        // All coroutines are done
+        }
     }
 
     private IEnumerator BakingCoroutine(Animator animator, GameObject itemGameObject, GameObject hand)

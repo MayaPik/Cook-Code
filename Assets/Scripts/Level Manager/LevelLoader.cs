@@ -16,18 +16,7 @@ public class LevelLoader : MonoBehaviour
 		}
 		else if (sameLevel)
 		{
-			Scene activeScene = SceneManager.GetActiveScene();
-
-			for (int i = 0; i < SceneManager.sceneCount; i++)
-			{
-				Scene scene = SceneManager.GetSceneAt(i);
-
-				if (scene != activeScene && scene.name != continuouslyRunningSceneName)
-				{
-					levelToLoadOnClick = scene.name;
-					break;
-				}
-			}
+			levelToLoadOnClick = GetActiveSceneName();
 		}
 
 	}
@@ -68,4 +57,20 @@ public class LevelLoader : MonoBehaviour
 
 		}
     }
-}
+
+	string GetActiveSceneName()
+	{
+    Scene activeScene = SceneManager.GetActiveScene();
+
+			for (int i = 0; i < SceneManager.sceneCount; i++)
+			{
+				Scene scene = SceneManager.GetSceneAt(i);
+
+				if (scene != activeScene && scene.name != continuouslyRunningSceneName)
+				{
+					return scene.name;
+				}
+			}
+    return null; // Return null if no other scene found
+		}
+	}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.69343275, g: 0.5717529, b: 0.3887346, a: 1}
+  m_IndirectSpecularColor: {r: 0.86328924, g: 0.7923751, b: 0.6663508, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -437,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5960747775658837827, guid: def14155ded2649b1a886d1a800c1661, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5960747775658837827, guid: def14155ded2649b1a886d1a800c1661, type: 3}
       propertyPath: m_LocalPosition.x
@@ -931,7 +931,7 @@ Transform:
   - {fileID: 1825312320}
   - {fileID: 699207476}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1428768352
 PrefabInstance:
@@ -1067,7 +1067,7 @@ Transform:
   - {fileID: 1814553801}
   - {fileID: 84392284}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551740974 stripped
 GameObject:
@@ -1240,7 +1240,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1852505886
 MonoBehaviour:
@@ -1426,7 +1426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1100092473216629945, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1100092473216629945, guid: 8e5e89973b8fb49dd8246063aba0d2dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1622,7 +1622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195162823977008704, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5195162823977008704, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1700,6 +1700,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Canvas UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5195162824121484298, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195162824121484298, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195162824121484298, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195162824121484298, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -218.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195162824121484298, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -209.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
 --- !u!1001 &7267238279099064369
@@ -1721,6 +1741,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2036104010}
+    - target: {fileID: 7267238279803809083, guid: e65b07f34529b48719fa843391f82653, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7267238279803809085, guid: e65b07f34529b48719fa843391f82653, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1731,7 +1755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7267238279803809085, guid: e65b07f34529b48719fa843391f82653, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7267238279803809085, guid: e65b07f34529b48719fa843391f82653, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1816,7 +1840,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9048918996020875314, guid: b02e2fd69747a40e299565c1766255bb, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9048918996020875314, guid: b02e2fd69747a40e299565c1766255bb, type: 3}
       propertyPath: m_LocalPosition.x

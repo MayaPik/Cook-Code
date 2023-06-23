@@ -14,7 +14,6 @@ public class SyncCards : MonoBehaviour
     [SerializeField] GameObject PracticePanel;
     [SerializeField] GameObject[] ToolsForExplain;
     [SerializeField] GameObject[] ToolsForPractice;
-
     private string sceneMode = "SyncExplained";
 
 
