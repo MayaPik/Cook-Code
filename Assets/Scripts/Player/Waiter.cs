@@ -35,6 +35,7 @@ public class Waiter : Player
         {
                 actionParticles.Play(); // Start the ParticleSystem
         }
+        playSound.TriggerSoundEvent(); 
         if (objectAction != null)
         {
             objectAction.PerformAction();

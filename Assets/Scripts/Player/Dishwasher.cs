@@ -35,6 +35,7 @@ public class Dishwasher : Player
             {
                 actionParticles.Play(); // Start the ParticleSystem
             }
+            playSound.TriggerSoundEvent(); 
         yield return new WaitForSeconds(1f);
         item.transform.SetParent(poolOfObjects.transform, false);
         animator.SetTrigger("Idle");

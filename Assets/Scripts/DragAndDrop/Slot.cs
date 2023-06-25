@@ -40,7 +40,9 @@ public class Slot : MonoBehaviour
         {
             if (dragged != null)
             {
-                dragged.transform.position = transform.position;
+                Vector3 position = transform.position;
+                position.y = dragged.transform.position.y; // Set the Y-axis position to match the slot's Y-axis
+                dragged.transform.position = position;
                 draggedObject = dragged;
             }
         }

@@ -8,6 +8,7 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
     public Vector3 originalPosition;
     public Quaternion originalRotation;
     [SerializeField] public ParticleSystem actionParticles; // Reference to the ParticleSystem
+    public PlaySound playSound; 
 
     protected virtual void Start() //The "virtual" keyword allows derived classes to override this method with their own implementation.
     {
@@ -54,6 +55,7 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
         {
                 actionParticles.Play(); // Start the ParticleSystem
         }
+        playSound.TriggerSoundEvent(); 
         ObjectAction objectAction = item.GetComponent<ObjectAction>();
         if (objectAction != null)
         {

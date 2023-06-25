@@ -144,17 +144,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100092473216629944}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a342f16a0550446ea7059fbab2e616f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  buttonHome: {fileID: 0}
-  buttonAgain: {fileID: 0}
+  buttonReferences: {fileID: 0}
+  WinPanel: {fileID: 0}
+  FailPanel: {fileID: 0}
   hand: {fileID: 0}
   poolOfObjects: {fileID: 0}
-  defaultTrigger: 
+  defaultTrigger: Sit
 --- !u!1 &1100092474273051763
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "for (int i = 1; i <= numberOfRolls; i++) {\n    RollTheDough();\n}"
+  m_text: "for (int i = 0; i <= numberOfRolls; i++) {\n    RollTheDough();\n}"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6af6378288a1344c0b4bce751aa35832, type: 2}
   m_sharedMaterial: {fileID: -3075388744303368718, guid: 6af6378288a1344c0b4bce751aa35832, type: 2}
@@ -230,8 +231,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4292993535
+  m_fontColor: {r: 1, g: 0.88235295, b: 0.88235295, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -365,8 +366,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4292993535
+  m_fontColor: {r: 1, g: 0.8820755, b: 0.8820755, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -627,7 +628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Times to Repeat...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -726,7 +727,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8273602203404576300}
   - component: {fileID: 4314026375404957999}
-  - component: {fileID: 1531120767}
   m_Layer: 5
   m_Name: Text Area
   m_TagString: Untagged
@@ -770,22 +770,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
---- !u!114 &1531120767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6230416813315610546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab2c2b1541a63419c846530e798e1ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectLocation: {x: 0, y: 0, z: 0}
-  objectRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
-  objectSize: {x: 1, y: 1, z: 1}
-  type: 0
 --- !u!1 &8317200878075152900
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +941,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6230416813315610546}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: set_tag
         m_Mode: 0
@@ -999,7 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6654d975efa46ca80ffb74c804c656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggedObject: {fileID: 6230416813315610546}
+  draggedObject: {fileID: 0}
   spriteRenderer: {fileID: 0}
   regularSprite: {fileID: 0}
   hoverSprite: {fileID: 0}
@@ -1013,7 +997,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8357780331431390896, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
       propertyPath: m_Name
-      value: Play Button (1)
+      value: Play Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1100092473216629926}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RunInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeToMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RunFunction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CameraChanges, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.UI.Selectable, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357780331431390910, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8357780331431390911, guid: 375252ff2c2c146278a6eb2ef7873099, type: 3}
       propertyPath: m_Pivot.x

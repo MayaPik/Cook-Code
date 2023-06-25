@@ -23,6 +23,10 @@
       {
         "level": "Waiter",
         "text": "Variables are like containers in which we can store different things, just like the food you order at a restaurant. As a waiter, you need to listen to the customer's request and put the correct food items in the right containers (variables)."
+      },
+       {
+        "level": "MainScene",
+        "text": "Press on one of the crew members to start and help them do their role!"
       }
           
     ]

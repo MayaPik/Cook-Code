@@ -8,9 +8,12 @@ public class DragAndDrop : MonoBehaviour
     private Slot hitSlot;
     public Vector3 originalPosition;
     private bool hover;
+    public PlaySound playSound; // Reference to the PlaySound script
+
 
     private void Awake()
     {
+    playSound = FindObjectOfType<PlaySound>();
     fpsCamera = GameObject.Find("FPSCamera").GetComponent<Camera>();
     }
     
@@ -79,6 +82,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseUp()
     {
+        playSound.TriggerSoundEvent(); 
         transform.GetComponent<BoxCollider>().enabled = true;
         hover = false;
 

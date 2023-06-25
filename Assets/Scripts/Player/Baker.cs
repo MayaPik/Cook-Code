@@ -36,6 +36,7 @@ public class Baker : Player
             {
                 actionParticles.Play(); // Start the ParticleSystem
             }
+            playSound.TriggerSoundEvent(); 
         yield return new WaitForSeconds(1.0f);
     }
 }
