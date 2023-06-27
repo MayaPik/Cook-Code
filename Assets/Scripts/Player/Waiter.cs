@@ -44,7 +44,7 @@ public class Waiter : Player
         }
         else
         {
-            yield return StartCoroutine(BreakParentLoop());
+        yield return StartCoroutine(BreakParentLoop());
         }
     }
 }

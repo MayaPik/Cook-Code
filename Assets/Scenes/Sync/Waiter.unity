@@ -1006,7 +1006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4529490487298604209, guid: 66f48dd724d862745a6ae775ee9cd3a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.06853935
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4529490487298604209, guid: 66f48dd724d862745a6ae775ee9cd3a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1039,6 +1039,14 @@ PrefabInstance:
     - target: {fileID: 4529490487298604209, guid: 66f48dd724d862745a6ae775ee9cd3a0, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585981594541651282, guid: 66f48dd724d862745a6ae775ee9cd3a0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585981594541651282, guid: 66f48dd724d862745a6ae775ee9cd3a0, type: 3}
+      propertyPath: m_Size.z
+      value: 0.17
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3355418414698874846, guid: 66f48dd724d862745a6ae775ee9cd3a0, type: 3}

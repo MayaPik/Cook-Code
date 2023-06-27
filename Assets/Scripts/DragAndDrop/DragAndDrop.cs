@@ -10,30 +10,35 @@ public class DragAndDrop : MonoBehaviour
     private bool hover;
     public PlaySound playSound; // Reference to the PlaySound script
 
-
     private void Awake()
     {
-    playSound = FindObjectOfType<PlaySound>();
-    fpsCamera = GameObject.Find("FPSCamera").GetComponent<Camera>();
+        playSound = FindObjectOfType<PlaySound>();
+        fpsCamera = GameObject.Find("FPSCamera").GetComponent<Camera>();
     }
-    
+
     private void Start()
     {
         hover = false;
         originalPosition = transform.position;
     }
 
-    private void Update()
+   private void Update()
+{
+    if (hitSlot)
     {
-        if (hitSlot)
-        {
-            hitSlot.HoverColor(hover);
-        }
+        hitSlot.HoverColor(hover);
     }
+    else if (hitSlot != null)
+    {
+        hitSlot.HoverColor(false);
+        hitSlot = null;
+        hover = false;
+    }
+}
 
     private Vector3 GetMouseWorldPosition()
     {
-        var mouseScreenPos = Input.mousePosition;
+        Vector3 mouseScreenPos = Input.mousePosition;
         mouseScreenPos.z = fpsCamera.WorldToScreenPoint(transform.position).z;
         return fpsCamera.ScreenToWorldPoint(mouseScreenPos);
     }
@@ -45,19 +50,18 @@ public class DragAndDrop : MonoBehaviour
         transform.GetComponent<BoxCollider>().enabled = false;
     }
 
-
     private void OnMouseDrag()
     {
         Vector3 targetPosition = GetMouseWorldPosition() + offset;
         targetPosition.z = transform.position.z;
         transform.position = targetPosition;
-        var rayOrigin = fpsCamera.transform.position;
-        var rayDirection = GetMouseWorldPosition() - fpsCamera.transform.position;
+
+        Ray ray = fpsCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
 
-        if (Physics.Raycast(rayOrigin, rayDirection, out hitInfo))
+        if (Physics.Raycast(ray, out hitInfo))
         {
-            var newHitSlot = hitInfo.transform.GetComponent<Slot>();
+            Slot newHitSlot = hitInfo.collider.GetComponent<Slot>();
             if (newHitSlot != null && newHitSlot != hitSlot)
             {
                 if (hitSlot != null)
@@ -80,29 +84,30 @@ public class DragAndDrop : MonoBehaviour
         }
     }
 
-    private void OnMouseUp()
-    {
-        playSound.TriggerSoundEvent(); 
-        transform.GetComponent<BoxCollider>().enabled = true;
-        hover = false;
+  private void OnMouseUp()
+{
+    playSound.TriggerSoundEvent();
+    transform.GetComponent<BoxCollider>().enabled = true;
+    hover = false;
 
-        if (hitSlot != null)
+    if (hitSlot != null)
+    {
+        if (previousSlot != null && previousSlot != hitSlot)
         {
-            if (previousSlot != null && previousSlot != hitSlot)
-            {
-                previousSlot.EmptySlot();
-            }
-            hitSlot.OnDrop(gameObject);
-            previousSlot = hitSlot;
+            previousSlot.EmptySlot();
         }
-        else
-        {
-            transform.position = originalPosition;
-            if (previousSlot != null)
-            {
-                previousSlot.EmptySlot();
-                previousSlot = null;
-            }
-        }
+        hitSlot.OnDrop(gameObject);
+        previousSlot = hitSlot;
     }
+    else if (previousSlot != null)
+    {
+        previousSlot.EmptySlot();
+        previousSlot = null;
+    }
+    else
+    {
+        transform.position = originalPosition;
+    }
+}
+
 }

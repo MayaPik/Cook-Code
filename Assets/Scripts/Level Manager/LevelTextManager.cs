@@ -7,10 +7,15 @@ public class LevelTextManager : MonoBehaviour
     public TextAsset levelTextFile; // Reference to the JSON file in the Inspector
     private LevelTextData levelTextData;
     public TextMeshProUGUI textMeshPro;
+    public GameObject popup;
     private string currentSceneName;
+    public bool isPopupClosed = true;
+
 
     private void Start()
     {
+        popup.SetActive(false);
+
         if (levelTextFile != null)
         {
             string jsonString = levelTextFile.text;
@@ -19,6 +24,14 @@ public class LevelTextManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (popup != null)
+        {
+            isPopupClosed = !popup.activeSelf;
+        }
+    }
+    
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -32,6 +45,21 @@ public class LevelTextManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SetLevelText(scene.name);
+        if (!HasVisitedScene(scene.name) && scene.name != "MainScene")
+        {
+            popup.SetActive(true);
+            MarkSceneVisited(scene.name);
+        }
+    }
+
+    private bool HasVisitedScene(string sceneName)
+    {
+        return PlayerPrefs.HasKey(sceneName + "_Visited");
+    }
+
+    private void MarkSceneVisited(string sceneName)
+    {
+        PlayerPrefs.SetInt(sceneName + "_Visited", 1);
     }
 
     public void SetLevelText(string levelTag)
@@ -49,6 +77,8 @@ public class LevelTextManager : MonoBehaviour
             textMeshPro.text = "Level text not found";
         }
     }
+
+   
 }
 
 [System.Serializable]

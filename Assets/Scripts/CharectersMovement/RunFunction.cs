@@ -81,10 +81,15 @@ public class RunFunction : MonoBehaviour
         if (player.shouldBreakLoop)
         {
             break; // Exit the loop if shouldBreakLoop is true
+            
         }
     }
-
+    if (!player.shouldBreakLoop) {
     CheckIfCorrect();
+    }
+    else {
+    TryAgain();
+    }
 }
 
 private void CheckIfCorrect()

@@ -258,10 +258,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 208015682492732844, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
-      propertyPath: m_TagString
-      value: Hand
-      objectReference: {fileID: 0}
+    - target: {fileID: 576992154, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 1778989862}
+    - target: {fileID: 576992154, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
+      propertyPath: poolOfObjects
+      value: 
+      objectReference: {fileID: 957647593}
+    - target: {fileID: 576992154, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
+      propertyPath: actionParticles
+      value: 
+      objectReference: {fileID: 8916908750454737655}
     - target: {fileID: 2367166207852200208, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
       propertyPath: m_Name
       value: Dishwasher
@@ -310,48 +318,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3755457773039147401, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 576992152, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
---- !u!1 &576992151 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2367166207852200208, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
+--- !u!114 &576992151 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 576992154, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
   m_PrefabInstance: {fileID: 576992150}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &576992153 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -6241480018704524457, guid: c1f2efca1a40c4511850abf543e5ca66, type: 3}
-  m_PrefabInstance: {fileID: 576992150}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576992151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57b5b9eaa6f244cf4bbb11cb1f43e307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &576992154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576992151}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e8606448feb4bafa466dae7e8789de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldBreakLoop: 0
-  originalPosition: {x: 0, y: 0, z: 0}
-  originalRotation: {x: 0, y: 0, z: 0, w: 0}
-  actionParticles: {fileID: 8916908750454737655}
-  playSound: {fileID: 576992153}
-  destination: {fileID: 1778989862}
-  poolOfObjects: {fileID: 957647593}
 --- !u!114 &694584588 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9048918996020875317, guid: b02e2fd69747a40e299565c1766255bb, type: 3}
@@ -466,7 +445,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5195162823203177415, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
       propertyPath: LevelToUnlock
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5195162823203177416, guid: 2b81a6e3f523a48a5bb398f3936d08d6, type: 3}
       propertyPath: pointstoset
@@ -1097,7 +1076,7 @@ PrefabInstance:
     - target: {fileID: 9189685506131905304, guid: 6271ec1f434a14efeab8db6b012c473e, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 576992151}
     - target: {fileID: 9189685506131905304, guid: 6271ec1f434a14efeab8db6b012c473e, type: 3}
       propertyPath: poolOfObjects
       value: 

@@ -9,12 +9,13 @@ public class SyncCards : MonoBehaviour
     private List<Animator> childAnimators;
     private List<Button> buttons;
     private int currentIndex = 0;
-     public ButtonReferences buttonReferences;
+    public ButtonReferences buttonReferences;
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject PracticePanel;
     [SerializeField] GameObject[] ToolsForExplain;
     [SerializeField] GameObject[] ToolsForPractice;
     private string sceneMode = "SyncExplained";
+    public LevelTextManager levelTextManager;
 
 
     private void Start()
@@ -27,7 +28,8 @@ public class SyncCards : MonoBehaviour
         buttons = new List<Button>();
         CollectChildAnimators(transform);
         CollectButtons(transform);
-        
+        levelTextManager = FindObjectOfType<LevelTextManager>();
+
         foreach (Animator animator in childAnimators)
         {
             animator.enabled = false;
@@ -42,7 +44,17 @@ public class SyncCards : MonoBehaviour
             WinPanel.SetActive(false);
         }
 
-        // Start playing the animations
+    StartCoroutine(StartAnimationSequence(sceneName));
+}
+
+    private IEnumerator StartAnimationSequence(string sceneName)
+    {
+        yield return new WaitForSeconds(1.0f);
+        while (!levelTextManager.isPopupClosed)
+        {
+            yield return null;
+        }
+
         PlayNextAnimation(sceneName);
     }
 

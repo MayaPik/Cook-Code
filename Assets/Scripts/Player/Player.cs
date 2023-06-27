@@ -55,7 +55,9 @@ public abstract class Player : MonoBehaviour //The "abstract" keyword means that
         {
                 actionParticles.Play(); // Start the ParticleSystem
         }
+        if (playSound != null) {
         playSound.TriggerSoundEvent(); 
+        }
         ObjectAction objectAction = item.GetComponent<ObjectAction>();
         if (objectAction != null)
         {

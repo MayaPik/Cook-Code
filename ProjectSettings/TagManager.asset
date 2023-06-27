@@ -43,6 +43,7 @@ TagManager:
   - Drink
   - Food
   - Dessert
+  - 0
   layers:
   - Default
   - TransparentFX

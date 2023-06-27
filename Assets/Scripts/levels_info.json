@@ -10,7 +10,7 @@
       },
       {
         "level": "Baker",
-        "text": "We have a loop that starts from 0, and each time it runs, we increase \"i\" by 1. The loop continues as long as \"i\" is less than or equal to the number of rolls we want. In each step of the loop, we roll the dough using a special action called \"RollTheDough().\""
+        "text": "We have a loop that starts from 0, and each time it runs, we increase \"i\" by 1. The loop continues as long as \"i\" is less than or equal to the number of rolls we want. In each step of the loop, we roll the dough."
       },
       {
         "level": "SousChef",
@@ -22,7 +22,7 @@
       },
       {
         "level": "Waiter",
-        "text": "Variables are like containers in which we can store different things, just like the food you order at a restaurant. As a waiter, you need to listen to the customer's request and put the correct food items in the right containers (variables)."
+        "text": "Variables are like containers in which we can store different things, just like the food you order at a restaurant. You need to listen to the customer and put the correct food items in the right containers (variables)."
       },
        {
         "level": "MainScene",
